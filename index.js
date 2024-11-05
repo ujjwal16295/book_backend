@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 
 connectToMongo();
 
-const BARD_KEY = "AIzaSyBLNPdARB3eSPsEqsIszVfXrgnvcMe-mCw"
+const BARD_KEY = process.env.REACT_APP_BARD_API_KEY
 
 app.get("/bookSummary",async(req,res)=>{
 let success=false
